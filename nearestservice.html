@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nearest Electricity Service</title>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            color: #f5f5f5;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(0,0,0,0.7);
+            padding: 1rem 2rem;
+            box-shadow: 0 0 10px #00cfff;
+        }
+
+        nav .logo h1 {
+            color: #00cfff;
+            font-weight: bold;
+        }
+
+        nav .menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        nav .menu a:hover {
+            color: #00cfff;
+        }
+
+        section {
+            padding: 60px 20px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00cfff;
+        }
+
+        section h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .change_content {
+            color: #ff5722;
+            animation: fadeIn 3s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ddd;
+            margin: 20px 0;
+        }
+
+        .btnone, .btntwo {
+            display: inline-block;
+            margin: 10px 10px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .btnone {
+            background-color: #00cfff;
+            color: #fff;
+        }
+
+        .btntwo {
+            background-color: #ff5722;
+            color: #fff;
+        }
+
+        .btnone:hover, .btntwo:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #00cfff;
+        }
+
+        .container {
+            background-color: rgba(0,0,0,0.6);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00cfff;
+            margin-top: 40px;
+        }
+
+        .container h2 {
+            margin-bottom: 15px;
+            color: #00cfff;
+        }
+
+        .container .para {
+            text-align: justify;
+        }
+
+        @media screen and (max-width: 768px) {
+            section h1 {
+                font-size: 2rem;
+            }
+
+            .btnone, .btntwo {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            nav .menu a {
+                margin: 0 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo"> <h1>PEAK SENSE</h1> </div>
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="contactus.html">Contact</a>
+        </div>
+    </nav>
+
+    <main>
+        <section>
+            <h3>Welcome To Nearest Service</h3>
+            <h1>DO COME & VISIT <span class="change_content">DELHI POWER</span> <span>|</span></h1>
+            <p>"India once is not enough"</p>
+            <a href="#" class="btnone">Learn More</a>
+            <a href="#" class="btntwo">Signup Here</a>
+            
+            <div class="container">
+                <h2>Electricity Call Center</h2>
+                <p class="para">
+                    To address power supply-related complaints proactively, several power distribution companies and state electricity boards have set up Electricity Call Centers. These operate 24/7 via telephone, fax, and email. Dial **1912** for power-related issues.<br><br>
+                    Complaints are registered, tracked, and forwarded to field personnel. Escalation mechanisms ensure resolution if not addressed in time. Call centers use advanced contact and process management systems, either in-house or outsourced.<br><br>
+                    States like Tamil Nadu, Andhra Pradesh, Karnataka have implemented them, while Delhi and others are in progress — all aligning with regulatory service standards.
+                </p>
+            </div>
+        </section>
+    </main>
+</header>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-size: 16px;
+  min-height: 100vh;
+  background-image: url('Designer.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #555;
+}
+
+.header {
+  background-color: white;
+  padding: 0;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+#navbar a:hover {
+  background-color: #00bcd4;
+  color: white;
+}
+
+#navbar a.active {
+  background-color: #2304aa;
+  color: white;
+}
+
+.content {
+  padding: 20px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+.flexContainer {
+  display: flex;
+  background-color: #222;
+  padding: 10px;
+}
+
+.flexChild {
+  flex: 1;
+  padding: 10px;
+  color: white;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Navigation arrows */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 188, 212, 0.6);
+}
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.active, .dot:hover {
+  background-color: #00bcd4;
+}
+
+/* Slideshow fade effect */
+.fade {
+  animation-name: fadeEffect;
+  animation-duration: 1.5s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next {font-size: 12px}
+}
+
+/* Centered form container */
+.container {
+  position: absolute;
+  left: 0;
+  margin: 20px;
+  max-width: 500px;
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center alignment fix */
+#lol {
+  margin: 20px auto;
+  width: max-content;
+  padding: 10px 20px;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Chart Styling */
+.chart {
+  background-color: white;
+  padding: 40px;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  height: 450px;
+}
+
+.chart .chart_types {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.chart .chart_types button {
+  padding: 10px 25px;
+  margin: 0 10px;
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.chart .chart_types button:hover {
+  background-color: #019ab0;
+}

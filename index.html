@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delhi Electricity Consumption</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('Designer.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            color: #1a1a1a;
+        }
+
+        .header {
+            background: rgba(0, 100, 140, 0.85);
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .flexContainer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .flexChild img {
+            height: 80px;
+        }
+
+        #navbar {
+            background-color: #004d66;
+            overflow: hidden;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        #navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        #navbar a:hover, #navbar .active {
+            background-color: #00e0a3;
+            color: #000;
+        }
+
+        .mySlides img {
+            width: 100%;
+            max-height: 450px;
+            object-fit: cover;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 40%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s ease;
+            user-select: none;
+            z-index: 999;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.6);
+        }
+
+        .prev { left: 0; }
+        .next { right: 0; }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 5px 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot:hover {
+            background-color: #00b894;
+        }
+
+        marquee {
+            margin: 20px auto;
+            display: block;
+            width: 80%;
+        }
+
+        .scr {
+            height: 60px;
+            margin: 10px;
+        }
+
+        .chart {
+            padding: 40px;
+            background: rgba(255,255,255,0.95);
+            margin: 30px auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .chart_types button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            background-color: #00796b;
+            color: white;
+            font-weight: 500;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .chart_types button:hover {
+            background-color: #004d40;
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #222;
+            color: #fff;
+            padding: 20px 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            #navbar a {
+                flex: 1 1 100%;
+                text-align: center;
+            }
+
+            .chart {
+                padding: 20px;
+            }
+
+            .flexChild img {
+                height: 60px;
+            }
+
+            .prev, .next {
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .scr {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="flexContainer">
+            <div class="flexChild logo">
+                <img src="logo22.jpg" alt="Logo">
+            </div>
+            <div class="flexChild misc">
+                <img src="img3.jpg" alt="Side Image">
+            </div>
+        </div>
+    </div>
+
+    <div id="navbar">
+        <a class="active" href="javascript:void(0)">Home</a>
+        <a href="about.html">About</a>
+        <a href="nearestservice.html">Nearest services</a>
+        <a href="Predictions.html">Predictions</a>
+        <a href="newconnections.html">New Connections</a>
+        <a href="payment.html">Payment</a>
+        <a href="login.html">Login</a>
+        <a href="contactus.html">Contact Us</a>
+    </div>
+
+    <div class="mySlides fade"><img src="modi4.jpg" alt=""></div>
+    <div class="mySlides fade"><img src="modi5.png" alt=""></div>
+    <div class="mySlides fade"><img src="modi6.png" alt=""></div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+    <div style="text-align:center; margin: 10px 0;">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+    <marquee direction="left">
+        <img class="scr" src="1.png" alt="">
+        <img class="scr" src="2.png" alt="">
+        <img class="scr" src="3.jpg" alt="">
+        <img class="scr" src="4.jpg" alt="">
+        <img class="scr" src="5.jpg" alt="">
+        <img class="scr" src="6.jpg" alt="">
+        <img class="scr" src="7.gif" alt="">
+        <img class="scr" src="8.png" alt="">
+        <img class="scr" src="9.png" alt="">
+        <img class="scr" src="10.png" alt="">
+    </marquee>
+
+    <div class="chart">
+        <div class="chart_types">
+            <button onclick="setChartType('bar')">Bars</button>
+            <button onclick="setChartType('line')">Line</button>
+            <button onclick="setChartType('doughnut')">Doughnut</button>
+            <button onclick="setChartType('polarArea')">Polar Area</button>
+            <button onclick="setChartType('radar')">Radar</button>
+        </div>
+        <canvas id="myChart" width="400" height="400"></canvas>
+    </div>
+
+    <div style="text-align: center;">
+        <img src="footer.jpg" alt="Footer" style="width: 100%; max-width: 1000px;">
+    </div>
+
+    <div class="footer">
+        <p>This website belongs to Ministry of Power Govt. of India, Shram Shakti Bhawan, Rafi Marg, New Delhi-1</p>
+        <p>Hosted by National Informatics Centre (NIC)</p>
+        <p>Last Updated on: 29th November 2022</p>
+    </div>
+
+    <script src="homepage.js"></script>
+</body>
+</html>
