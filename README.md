@@ -1,1 +1,1 @@
-# Delhi-electricity-consumption
+# Delhi-Electricity-Consumption
